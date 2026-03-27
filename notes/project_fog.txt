@@ -1,0 +1,9 @@
+PROJECT FOG
+
+By: Thomas Judge
+
+Project FOG is a custom-built, salted and peppered stream cipher designed for secure, discrete communication between Linux-based nodes (e.g., Kali Linux and Raspberry Pi). Unlike standard static ciphers, Project FOG utilizes a Dynamic Seed Generation process and a Deterministic Random Bit Generator (DRBG) to ensure that every character in a message is encrypted with a unique set of variables (a,h,k).
+
+The security of the engine is built on a three-tier Key Derivation Function (KDF). First, a user-defined password provides the initial entropy. Second, a 4-byte random Salt is generated for every session and prepended to the ciphertext, effectively neutralizing Rainbow Table attacks and ensuring that identical messages never produce the same hex output. Third, a hardcoded Secret Pepper is mixed into the internal hash "pot" before the engine is seeded, providing a final layer of defense against unauthorized decryption even if the password is compromised.
+
+The mathematical core operates within a Prime Field (Z257​), leveraging a primitive root (Base 3) to ensure full coverage of the ASCII character set. Encryption is achieved through modular exponentiation and linear shifts (result=(a⋅3x−h+k)(mod257)), while decryption is handled via the Extended Euclidean Algorithm for modular inverses and a pre-computed Discrete Logarithm Table. By utilizing the 64-bit Mersenne Twister (MT19937-64) as the underlying stream engine, Project FOG achieves a high period of non-repeating shifts, making it resilient against standard frequency analysis and providing a robust foundation for further cybersecurity research.

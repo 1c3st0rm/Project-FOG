@@ -1,0 +1,5 @@
+THE SEED GENERATOR
+
+By: Thomas Judge
+
+Today march 19th 2026 is the day I finished the encryption part of my encryption system. This is how it works, The program will first ask for a Password. Next the program will use two variables I named pot and multiplier. These are both very large prime numbers, they are used alongside XOR in this order: 

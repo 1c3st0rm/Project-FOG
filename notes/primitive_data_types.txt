@@ -1,0 +1,31 @@
+PRIMITIVE DATA TYPE: They are the BASIC BUILT-IN data types that store numbers and characters.
+
+(i) INTEGER: data type int stores integer numbers into the computer memory and is of differet types.
+Example:
+int age; ##This is declared as a memory alocation (4 Bytes in size) named "age" is declared to store an integer value (number with no decimals)
+
+(ii) FLOATING POINT: Data type float stores point numbers like decimals and esponetials. They occupt a memory size of 4 Bytes.
+Example:
+float price; ##This is declared as a memory location (4 Bytes in size) named "price" is declared to store a decimal value.
+
+(iii) DOUBLE: Data type double stores floating numbers, bigger in size than the float data type. It occupies a memory size of 8 Bytes.
+Example:
+double cosine; ##Declared memory space (8 bytes in size) named "cosine" is declares as a larcge fractions.
+
+(iv) CHARACTER: Daya type char stores a single character (letter) to the memory.They are actually integers that take up 1 Byte so "A" will be saved in the memory as 65, beacause of the ASCII code. It occupies a memory size of 1 byte and can store ASCII values ranging from 0 to 255. char is enclosed in single quotes.
+Example:
+char ch = 'K'; ##Memory size of 1 Byte named "ch' to store a single character K.
+
+	NOTE:signed char (Default): The computer uses the very first bit as a "signpost" (0 for positive, 1 for negative). This means it can store numbers from -128 to 127. unsigned char: The computer ignores the "signpost" and uses all 8 bits for the number. This allows for 0 to 255.
+
+(v) WIDE CHARACTERS: Data type wchar_t is similar to char type but with a memory size of 2 Bytes. It stores one or more characters that require more than 1 byte of space. wchar_t is declared with the prefix L. If you use an array ([]) it multyplies that means it multyplies all the letters + 1 hidden "null teminator" at the end, so the array actually takes up more than 2 bytes.
+Example:
+wchar_t wp[]=;"Prof" ##memory of size 10 bytes "wp" is declared to store 4 leters + null terminator "Prof"
+wcout<<wp; ##prints the value Prof.
+
+(vi) VOID: Data type stores nothing. It is used in C++ functions to represent no return value. It does occupy 0 Bytes of space.
+Example:
+void main() ##main function would return no value to the compiler.
+(vii) BOOLEAN: Data type bool stores 0 or 1 to represent TRUE or FALSE. It is used to check conditions and occupies 1 Byte of memory space.
+Example:
+bool marital_status; ##1 Byte of memory named "marital_status" is declared to store True or False dichotomy with value 1 or 0.

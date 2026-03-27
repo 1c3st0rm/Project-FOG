@@ -1,0 +1,4 @@
+SEED GENERATOR LOG
+By:Thomas Judge
+
+Today March 19th 2026, I finished the encryption part of my encryption system. The system utilizes a Deterministic Random Bit Generator (DRBG) seeded by a hashed user password. By using a Mersenne Twister (MT19937_64), the protocol generates a unique set of four parameters (a,b,h,k) for every byte of plaintext. This ensures that the cipher is resistant to frequency analysis, as identical plaintext characters will result in divergent ciphertext outputs. The final output is rendered as a Hexadecimal Dump for data integrity and cross-platform compatibility
